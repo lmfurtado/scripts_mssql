@@ -1,0 +1,37 @@
+USE [master]
+GO
+
+/****** Object:  DdlTrigger [Prevent_DB_Drop]    Script Date: 18/10/2016 14:50:24 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TRIGGER [Prevent_DB_Drop] 
+ON ALL SERVER 
+FOR DROP_DATABASE
+AS 
+DECLARE @oname NVARCHAR(100),
+        @eventData XML
+
+--set the EVENTDATA() functions value to our xml so we can parse it
+SET @eventData = EVENTDATA()  			
+SELECT @oname=@eventData.value('data(/EVENT_INSTANCE/ObjectName)[1]', 'SYSNAME')
+  BEGIN
+    PRINT 'Você não tem permissão para excluir um Banco de Dados. Contate o DBA.' 
+    ROLLBACK;
+  END
+
+GO
+
+SET ANSI_NULLS OFF
+GO
+
+SET QUOTED_IDENTIFIER OFF
+GO
+
+ENABLE TRIGGER [Prevent_DB_Drop] ON ALL SERVER
+GO
+
+

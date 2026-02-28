@@ -1,0 +1,28 @@
+select * from sys.traces where is_default = 1
+
+declare @path VARCHAR(512)
+
+select @path = path from sys.traces where is_default = 1
+
+SELECT loginname, IP, Max(starttime) as LastErrorTime, COUNT(*) AS AttempCounts
+FROM (
+SELECT t.loginname, REPLACE(SUBSTRING(t.textdata, CHARINDEX(':', t.textdata, CHARINDEX(':', t.textdata, 1) + 1) + 1, 16), ']', '') AS IP, t.starttime
+FROM dbo.fn_trace_gettable(@path, DEFAULT) AS t INNER JOIN
+sys.trace_events AS e ON t.eventclass = e.trace_event_id
+WHERE (eventclass = 20)) AS A
+GROUP BY loginname, IP
+order by LastErrorTime desc
+
+select distinct  t.hostname
+from fn_trace_gettable(@path, default) t
+inner join sys.trace_events e on t.eventclass = e.trace_event_id where eventclass=20
+execute sp_who2
+
+select e.name as eventclass, t.loginname,
+Replace(SUBSTRING (t.textdata,CHARINDEX(':', t.textdata, CHARINDEX(':', t.textdata, 1)+1)+1,16),']','') as IP ,
+t.textdata, t.hostname, t.ntusername, t.ntdomainname, t.clientprocessid,
+t.applicationname,  t.spid, t.starttime, t.error
+from fn_trace_gettable(@path, default) t
+inner join sys.trace_events e on t.eventclass = e.trace_event_id
+where eventclass=20
+order by starttime desc

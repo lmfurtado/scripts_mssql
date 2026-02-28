@@ -1,0 +1,31 @@
+-------------------------------------------------------- 
+-- Ativar funções avançadas (1=ativo, 0=inativo) 
+-------------------------------------------------------- 
+EXEC sp_configure 'show advanced option', '1';  
+GO 
+RECONFIGURE; 
+GO 
+ 
+-------------------------------------------------------- 
+-- Ativar função xp_cmdshell (1=ativo, 0=inativo) 
+-------------------------------------------------------- 
+EXEC sp_configure 'xp_cmdshell',1 
+GO 
+RECONFIGURE 
+GO 
+ 
+-------------------------------------------------------- 
+-- Define mapeamento a ser utilizado (caminho relativo) 
+-------------------------------------------------------- 
+EXEC XP_CMDSHELL 'net use z: \\ds\backup' 
+ 
+-------------------------------------------------------- 
+-- Valida estrutura mapeada 
+-------------------------------------------------------- 
+EXEC XP_CMDSHELL 'Dir x:' 
+
+/*
+NET USE [unidade]: \\[sERVIDOR]\[COMPARTILHAMENTO\ [sENHA] /USER:[uSUARIO]
+*/
+
+EXEC XP_CMDSHELL 'net use'

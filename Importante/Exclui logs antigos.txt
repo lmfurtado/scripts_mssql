@@ -1,0 +1,12 @@
+--Consulta Logs
+use master
+go
+xp_readerrorlog
+go
+
+--Recicla Logs, renomeia o atual e cria um novo zerado
+use master
+go
+exec sp_cycle_errorlog
+go
+exec xp_readerrorlog

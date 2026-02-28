@@ -1,0 +1,22 @@
+DECLARE @script varchar(max)
+
+DECLARE @sql varchar(max)
+
+SET @script=''
+
+SET @sql=''
+
+SET @script='alter table bonus
+add TESTE CHAR(1) ;'
+
+select @sql=@sql+CHAR(13)+ 'USE '+ name +CHAR(13)+CHAR(13)+@script+CHAR(13)
+
+FROM sys.databases
+
+WHERE name  not in ('master','tempdb','model','msdb')
+
+print (@sql)
+
+exec (@sql)
+
+select * from sys.databases

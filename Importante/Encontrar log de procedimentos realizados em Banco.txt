@@ -1,0 +1,3 @@
+--Encontrar log de procedimentos realizados em Banco
+
+https://blogs.msdn.microsoft.com/sqlserverfaq/2015/05/17/how-to-find-which-user-deleted-the-user-database-in-sql-server/

@@ -1,0 +1,56 @@
+--Verifica se tem conexões ativas no banco de dados:
+
+USE master
+SELECT * FROM sys.sysprocesses WHERE dbid = DB_ID ('BANCO_TESTE_PRINCIPAL')
+
+--Derruba Usuarios do Banco
+ALTER DATABASE BANCO_TESTE_PRINCIPAL SET OFFLINE WITH ROLLBACK IMMEDIATE
+
+--COloca Banco Online novamente
+ALTER DATABASE BANCO_TESTE_PRINCIPAL SET ONLINE
+
+--Conta Tables, Views, Functions e Procedures do Banco
+SELECT TABLE_CATALOG, count(TABLE_NAME) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE'
+group by TABLE_CATALOG
+
+SELECT * FROM INFORMATION_SCHEMA.VIEWS
+
+SELECT SPECIFIC_CATALOG, count(ROUTINE_NAME) FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_TYPE = 'PROCEDURE'
+group by SPECIFIC_CATALOG
+
+SELECT SPECIFIC_CATALOG, count (ROUTINE_NAME) FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_TYPE = 'FUNCTION'
+group by SPECIFIC_CATALOG
+
+--Conta quantos registros tem em cada tabela de determinado BD
+
+SELECT
+  s.[name]
+, t.[name]
+, p.[rows]
+FROM sys.schemas s
+INNER JOIN sys.tables t
+  ON t.[schema_id] = s.[schema_id]
+INNER JOIN sys.indexes i
+  ON i.[object_id] = t.[object_id]
+  AND i.[type] IN (0,1)
+INNER JOIN sys.partitions p
+  ON p.[object_id] = t.[object_id]
+  AND p.[index_id] = i.[index_id]
+ORDER BY
+  s.[name]
+, t.[name]
+
+
+--Query para listar todas as tabelas e colunas de um banco de dados SQL Server
+
+SELECT TABELAS.NAME AS TABELA, COLUNAS.NAME AS COLUNA, TIPOS.NAME AS TIPO, COLUNAS.LENGTH AS TAMANHO, COLUNAS.ISNULLABLE AS EH_NULO FROM SYSOBJECTS TABELAS INNER JOIN SYSCOLUMNS COLUNAS ON (TABELAS.ID = COLUNAS.ID) INNER JOIN SYSTYPES TIPOS ON (COLUNAS.USERTYPE = TIPOS.USERTYPE) WHERE TABELAS.XTYPE = ‘U’ /*’U’ = TABELAS*/ ORDER BY TABELAS.NAME
+
+EXEMPLO
+
+IF NOT EXISTS (select colunas.name  from sysobjects tabelas inner join syscolumns colunas on 
+			(TABELAS.ID = COLUNAS.ID) INNER JOIN SYSTYPES TIPOS ON (COLUNAS.USERTYPE = TIPOS.USERTYPE) WHERE TABELAS.XTYPE = 'U'
+			AND colunas.name = 'IPPT' and tabelas.name = 'PRODUTO')
+
+ALTER TABLE PRODUTO
+  ADD IPPT int NOT NULL DEFAULT 2
+GO

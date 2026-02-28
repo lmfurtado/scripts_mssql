@@ -1,0 +1,10 @@
+--Cópia de DB
+
+*Gerar Backup do original
+*Criar novo Banco de Dados
+*Realizar restore nele (Selecionar device)
+*Na aba files devera alterar o nome do caminho mdf e ldf 
+*Em options : Restaurar com Overwrite 1 opção
+(*Se necessário alterar o nome lógico)
+*Se status do Banco original ficar como "Restoring", rodar seguinte script como master:
+RESTORE DATABASE NomeDatabase WITH RECOVERY

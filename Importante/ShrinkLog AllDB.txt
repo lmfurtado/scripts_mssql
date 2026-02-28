@@ -1,0 +1,743 @@
+
+USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ALTER DATABASE ANJU  SET RECOVERY SIMPLE
+ GO
+ use ANJU
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (ANJU_log, 1)
+ GO
+ ALTER DATABASE ANJU SET RECOVERY FULL
+ GO
+ 
+USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE BANCO_TESTE_PRINCIPAL  SET RECOVERY SIMPLE
+ GO
+ use BANCO_TESTE_PRINCIPAL
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (BANCO_TESTE_PRINCIPAL_log, 1)
+ GO
+ ALTER DATABASE BANCO_TESTE_PRINCIPAL SET RECOVERY FULL
+ GO
+
+ 
+USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE BASICO_MALHAS_TESTE  SET RECOVERY SIMPLE
+ GO
+ use BASICO_MALHAS_TESTE
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (BASICO_MALHAS_TESTE_log, 1)
+ GO
+ ALTER DATABASE BASICO_MALHAS_TESTE SET RECOVERY FULL
+ GO
+  
+USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE BEHOVE_PIRACICABA  SET RECOVERY SIMPLE
+ GO
+ use BEHOVE_PIRACICABA
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (BEHOVE_PIRACICABA_log, 1)
+ GO
+ ALTER DATABASE BEHOVE_PIRACICABA SET RECOVERY FULL
+ GO
+ 
+USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE BOUTIQUE_DA_BIA  SET RECOVERY SIMPLE
+ GO
+ use BOUTIQUE_DA_BIA
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (BOUTIQUE_DA_BIA_log, 1)
+ GO
+ ALTER DATABASE BOUTIQUE_DA_BIA SET RECOVERY FULL
+ GO
+ 
+ USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE BRUNADW SET RECOVERY SIMPLE
+ GO
+ use BRUNADW
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (BRUNADW_log, 1)
+ GO
+ ALTER DATABASE BRUNADW SET RECOVERY FULL
+ GO
+ 
+USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE CAPRI SET RECOVERY SIMPLE
+ GO
+ use CAPRI
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (CAPRI_log, 1)
+ GO
+ ALTER DATABASE CAPRI SET RECOVERY FULL
+ GO
+ 
+USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE CASA_DA_ARVORE SET RECOVERY SIMPLE
+ GO
+ use CASA_DA_ARVORE
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (CASA_DA_ARVORE_log, 1)
+ GO
+ ALTER DATABASE CASA_DA_ARVORE SET RECOVERY FULL
+ GO 
+
+USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE CHARLOTE SET RECOVERY SIMPLE
+ GO
+ use CHARLOTE
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (CHARLOTE_log, 1)
+ GO
+ ALTER DATABASE CHARLOTE SET RECOVERY FULL
+ GO  
+ 
+USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE COLISEE  SET RECOVERY SIMPLE
+ GO
+ use COLISEE 
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (COLISEE_log, 1)
+ GO
+ ALTER DATABASE COLISEE SET RECOVERY FULL
+ GO 
+ 
+USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE COLISEE_COPY SET RECOVERY SIMPLE
+ GO
+ use COLISEE_COPY 
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (COLISEE_COPY_log, 1)
+ GO
+ ALTER DATABASE COLISEE_COPY SET RECOVERY FULL
+ GO
+ 
+USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE COMERCIAL SET RECOVERY SIMPLE
+ GO
+ use COMERCIAL 
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (COMERCIAL_log, 1)
+ GO
+ ALTER DATABASE COMERCIAL SET RECOVERY FULL
+ GO  
+ 
+USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE DEGAN_STORE SET RECOVERY SIMPLE
+ GO
+ use DEGAN_STORE 
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (DEGAN_STORE_log, 1)
+ GO
+ ALTER DATABASE DEGAN_STORE SET RECOVERY FULL
+ GO 
+
+USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE DENYS_CONFECCOES SET RECOVERY SIMPLE
+ GO
+ use DENYS_CONFECCOES 
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (DENYS_CONFECCOES_log, 1)
+ GO
+ ALTER DATABASE DENYS_CONFECCOES SET RECOVERY FULL
+ GO 
+
+USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE DONNA_JO SET RECOVERY SIMPLE
+ GO
+ use DONNA_JO 
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (DONNA_JO_log, 1)
+ GO
+ ALTER DATABASE DONNA_JO SET RECOVERY FULL
+ GO 
+ 
+USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE DRICCA SET RECOVERY SIMPLE
+ GO
+ use DRICCA 
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (DRICCA_log, 1)
+ GO
+ ALTER DATABASE DRICCA SET RECOVERY FULL
+ GO  
+ 
+USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE ELOYDW SET RECOVERY SIMPLE
+ GO
+ use ELOYDW 
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (ELOYDW_log, 1)
+ GO
+ ALTER DATABASE ELOYDW SET RECOVERY FULL
+ GO 
+
+USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE EQUUS SET RECOVERY SIMPLE
+ GO
+ use EQUUS
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (EQUUS_log, 1)
+ GO
+ ALTER DATABASE EQUUS SET RECOVERY FULL
+ GO 
+
+USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE HABACUQUE SET RECOVERY SIMPLE
+ GO
+ use HABACUQUE
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (HABACUQUE_log, 1)
+ GO
+ ALTER DATABASE HABACUQUE SET RECOVERY FULL
+ GO
+ 
+USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE HYPE_BEACH_WEAR SET RECOVERY SIMPLE
+ GO
+ use HYPE_BEACH_WEAR
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (HYPE_BEACH_WEAR_log, 1)
+ GO
+ ALTER DATABASE HYPE_BEACH_WEAR SET RECOVERY FULL
+ GO 
+ 
+USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE IMPLANTACAO SET RECOVERY SIMPLE
+ GO
+ use IMPLANTACAO
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (IMPLANTACAO_log, 1)
+ GO
+ ALTER DATABASE IMPLANTACAO SET RECOVERY FULL
+ GO 
+ 
+USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE INTIMA SET RECOVERY SIMPLE
+ GO
+ use INTIMA
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (INTIMA_log, 1)
+ GO
+ ALTER DATABASE INTIMA SET RECOVERY FULL
+ GO 
+ 
+USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE LAFINE SET RECOVERY SIMPLE
+ GO
+ use LAFINE
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (LAFINE_log, 1)
+ GO
+ ALTER DATABASE LAFINE SET RECOVERY FULL
+ GO 
+ 
+USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE LATHIFA SET RECOVERY SIMPLE
+ GO
+ use LATHIFA
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (LATHIFA_log, 1)
+ GO
+ ALTER DATABASE LATHIFA SET RECOVERY FULL
+ GO  
+ 
+USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE LOJAO_TOP SET RECOVERY SIMPLE
+ GO
+ use LOJAO_TOP
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (LOJAO_TOP_log, 1)
+ GO
+ ALTER DATABASE LOJAO_TOP SET RECOVERY FULL
+ GO  
+ 
+USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE MARCIA_BARRETO SET RECOVERY SIMPLE
+ GO
+ use MARCIA_BARRETO
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (MARCIA_BARRETO_log, 1)
+ GO
+ ALTER DATABASE MARCIA_BARRETO SET RECOVERY FULL
+ GO 
+
+USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE PETIT_LIBBY SET RECOVERY SIMPLE
+ GO
+ use PETIT_LIBBY
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (PETIT_LIBBY_log, 1)
+ GO
+ ALTER DATABASE PETIT_LIBBY SET RECOVERY FULL
+ GO
+
+USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE ROSA_ROSE SET RECOVERY SIMPLE
+ GO
+ use ROSA_ROSE
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (ROSA_ROSE_log, 1)
+ GO
+ ALTER DATABASE ROSA_ROSE SET RECOVERY FULL
+ GO 
+ 
+USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE S_E_O_CONFECCOES SET RECOVERY SIMPLE
+ GO
+ use S_E_O_CONFECCOES
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (S_E_O_CONFECCOES_log, 1)
+ GO
+ ALTER DATABASE S_E_O_CONFECCOES SET RECOVERY FULL
+ GO
+
+USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE SANTOS SET RECOVERY SIMPLE
+ GO
+ use SANTOS
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (SANTOS_log, 1)
+ GO
+ ALTER DATABASE SANTOS SET RECOVERY FULL
+ GO
+
+USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE SARAH SET RECOVERY SIMPLE
+ GO
+ use SARAH
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (SARAH_log, 1)
+ GO
+ ALTER DATABASE SARAH SET RECOVERY FULL
+ GO 
+ 
+USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE SECULO_INTIMO SET RECOVERY SIMPLE
+ GO
+ use SECULO_INTIMO
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (SECULO_INTIMO_log, 1)
+ GO
+ ALTER DATABASE SECULO_INTIMO SET RECOVERY FULL
+ GO  
+ 
+USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE TESTE_1_6_0 SET RECOVERY SIMPLE
+ GO
+ use TESTE_1_6_0
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (TESTE_1_6_0_log, 1)
+ GO
+ ALTER DATABASE SHO_MODAS SET RECOVERY FULL
+ GO
+
+USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE TESTE_1_6_1 SET RECOVERY SIMPLE
+ GO
+ use TESTE_1_6_1
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (TESTE_1_6_1_log, 1)
+ GO
+ ALTER DATABASE TESTE_1_6_1 SET RECOVERY FULL
+ GO 
+ 
+USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE TUNEL_SURF_SHOP SET RECOVERY SIMPLE
+ GO
+ use TUNEL_SURF_SHOP
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (TUNEL_SURF_SHOP_log, 1)
+ GO
+ ALTER DATABASE TUNEL_SURF_SHOP SET RECOVERY FULL
+ GO  
+USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE COLISEE_TESTE SET RECOVERY SIMPLE
+ GO
+ use COLISEE_TESTE 
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (COLISEE_TESTE_log, 1)
+ GO
+ ALTER DATABASE COLISEE_TESTE SET RECOVERY FULL
+ GO 
+ 
+ 
+ USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE DONNA_JO_TESTE SET RECOVERY SIMPLE
+ GO
+ use DONNA_JO_TESTE 
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (DONNA_JO_TESTE_log, 1)
+ GO
+ ALTER DATABASE DONNA_JO_TESTE SET RECOVERY FULL
+ GO
+ USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE HABACUQUE_TESTE SET RECOVERY SIMPLE
+ GO
+ use HABACUQUE_TESTE
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (HABACUQUE_TESTE_log, 1)
+ GO
+ ALTER DATABASE HABACUQUE_TESTE SET RECOVERY FULL
+ GO 
+ USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ALTER DATABASE ALFA_BEACH_E_FIT   SET RECOVERY SIMPLE
+ GO
+ use [ALFA_BEACH_E_FIT ]
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (ALFA_BEACH_E_FIT_log, 1)
+ GO
+ ALTER DATABASE ALFA_BEACH_E_FIT   SET RECOVERY FULL
+ GO 
+ USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE CLOSET_DA_LIZ  SET RECOVERY SIMPLE
+ GO
+ use [CLOSET_DA_LIZ ]
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (CLOSET_DA_LIZ_log, 1)
+ GO
+ ALTER DATABASE CLOSET_DA_LIZ SET RECOVERY FULL
+ GO 
+ USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE EMPORIO_ROMANI  SET RECOVERY SIMPLE
+ GO
+ use [EMPORIO_ROMANI ] 
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (EMPORIO_ROMANI_log, 1)
+ GO
+ ALTER DATABASE EMPORIO_ROMANI SET RECOVERY FULL
+ GO  
+ USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE HERIMAR_ROUPAS SET RECOVERY SIMPLE
+ GO
+ use [HERIMAR_ROUPAS ]
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (HERIMAR_ROUPAS_log, 1)
+ GO
+ ALTER DATABASE HERIMAR_ROUPAS SET RECOVERY FULL
+ GO  
+USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE MINT_SHOES  SET RECOVERY SIMPLE
+ GO
+ use [MINT_SHOES ]
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (MINT_SHOES_log, 1)
+ GO
+ ALTER DATABASE MINT_SHOES SET RECOVERY FULL
+ GO 
+ USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE SHO_MODAS SET RECOVERY SIMPLE
+ GO
+ use [SHO_MODAS ]
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (SHO_MODAS_log, 1)
+ GO
+ ALTER DATABASE SHO_MODAS SET RECOVERY FULL
+ GO  
+ USE master
+GO
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE BASICO_MALHAS_TESTE  SET RECOVERY SIMPLE
+ GO
+ use BASICO_MALHAS_TESTE
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (BASICO_MALHAS_TESTE_log, 1)
+ GO
+ ALTER DATABASE BASICO_MALHAS_TESTE SET RECOVERY FULL
+ GO
+ USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE JOAO_MARIA SET RECOVERY SIMPLE
+ GO
+ use JOAO_MARIA
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (JOAO_MARIA_log, 1)
+ GO
+ ALTER DATABASE JOAO_MARIA SET RECOVERY FULL
+ GO 
+USE master
+GO 
+SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+  GO
+ ALTER DATABASE LIDIA_LUVEZUTI SET RECOVERY SIMPLE
+ GO
+ use LIDIA_LUVEZUTI
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (LIDIA_LUVEZUTI_log, 1)
+ GO
+ ALTER DATABASE LIDIA_LUVEZUTI SET RECOVERY FULL
+ GO 

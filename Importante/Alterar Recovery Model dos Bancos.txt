@@ -1,0 +1,36 @@
+SELECT PARA VISUALIZAR TIPO DE RECOVERY MODEL DOS BANCOS.
+POSTERIORMENTE ALTERA O BANCO PARA RECOVERY SIMPLE E SHRINKA O LOG FILE
+
+
+USE master
+ GO
+ SELECT database_id [ID],  name [Banco], compatibility_level [Versao],
+ recovery_model_desc [Model] FROM sys.databases
+ GO
+ ALTER DATABASE <nome_do_banco> SET RECOVERY SIMPLE
+ GO
+ use <nome_do_banco>
+ GO
+ sp_helpfile
+ GO
+ DBCC SHRINKFILE (<nome_do_arquivo_de_log>, 1)
+ GO
+ 
+ 
+ 
+ CASO PERSISTA, TEM OUTRA MANEIRA
+ 
+ --Verificando o Tamanho do Transaction log
+DBCC SQLPERF ( LOGSPACE ) 
+
+use SEUDB
+go
+
+-- Forçando um Checkpoint
+CHECKPOINT
+
+-- Limpando o Transaction log através do Backup Log
+BACKUP LOG SEUDB WITH TRUNCATE_ONLY
+
+-- Diminuir o arquivo físico para 1mb
+DBCC SHRINKFILE (File_log, 1)

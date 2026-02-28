@@ -1,0 +1,11 @@
+EXEC sp_addlinkedserver 
+	@server='192.168.0.178', 
+	@provider='sqlncli',
+	@datasrc='192.168.0.178',
+	@srvproduct=''
+
+EXEC sp_addlinkedsrvlogin  	
+	@rmtsrvname = '192.168.0.178',  
+	@useself = 'false',  
+	@rmtuser = 'USE',             -- add here your login on Azure DB  
+	@rmtpassword = 'U$3Web!ds' -- add here your password on Azure DB  
